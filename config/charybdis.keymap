@@ -1,9 +1,9 @@
-
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &mt { tapping-term-ms = <400>; };
 
@@ -115,10 +115,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp AT_SIGN    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE           &trans  &trans           &trans         &trans         &trans
-&kp HASH   &kp QUESTION   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPERSAND      &trans  &kp RIGHT_SHIFT  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL
-&kp SLASH  &kp BACKSLASH  &kp LESS_THAN         &kp GREATER_THAN       &kp EXCLAMATION    &trans  &trans           &trans         &trans         &trans
-                          &kp LS(P)             &kp DOLLAR             &kp P              &trans  &trans
+&kp GRAVE  &kp AT_SIGN    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE           &trans              &trans              &trans               &trans  &trans
+&kp HASH   &kp QUESTION   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPERSAND      &trans              &kp LC(UP_ARROW)    &trans               &trans  &trans
+&kp SLASH  &kp BACKSLASH  &kp LESS_THAN         &kp GREATER_THAN       &kp EXCLAMATION    &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans  &trans
+                          &kp LS(P)             &kp DOLLAR             &kp P              &trans              &trans
             >;
         };
 
