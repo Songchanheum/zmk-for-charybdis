@@ -47,7 +47,7 @@
         compatible = "zmk,combos";
 
         lang_switch {
-            bindings = <&kp LC(SPACE)>;
+            bindings = <&kp CAPSLOCK>;
             key-positions = <10 20>;
         };
 
@@ -57,7 +57,7 @@
         };
 
         kp_lbkt {
-            bindings = <&kp LBKT>;
+            bindings = <&kp RIGHT_BRACKET>;
             key-positions = <9 19>;
         };
 
@@ -67,7 +67,7 @@
         };
 
         kp_rbkt {
-            bindings = <&kp RBKT>;
+            bindings = <&kp LEFT_BRACKET>;
             key-positions = <8 18>;
         };
     };
@@ -83,10 +83,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp Q          &kp W             &kp E         &kp R               &kp T      &kp Y        &kp U                &kp I              &kp O              &kp P
-&lhht LCTRL A  &lhht LEFT_ALT S  &lhht LGUI D  &lhht LEFT_SHIFT F  &kp G      &kp H        &rhht RIGHT_SHIFT J  &rhht RIGHT_GUI K  &rhht RIGHT_ALT L  &rhht RCTRL SEMICOLON
-&kp Z          &kp X             &kp C         &kp V               &kp B      &kp N        &kp M                &kp COMMA          &kp DOT            &lt 6 SLASH
-                                 &lt 1 ESCAPE  &lt 4 SPACE         &kp TAB    &lt 2 ENTER  &lt 3 BACKSPACE
+&kp Q          &kp W             &kp E         &kp R               &kp T        &kp Y        &kp U                &kp I              &kp O              &kp P
+&lhht LCTRL A  &lhht LEFT_ALT S  &lhht LGUI D  &lhht LEFT_SHIFT F  &kp G        &kp H        &rhht RIGHT_SHIFT J  &rhht RIGHT_GUI K  &rhht RIGHT_ALT L  &rhht RCTRL SEMICOLON
+&kp Z          &kp X             &kp C         &kp V               &kp B        &kp N        &kp M                &kp COMMA          &kp DOT            &lt 5 SLASH
+                                 &kp LEFT_GUI  &lt 4 SPACE         &lt 1 TAB    &lt 2 ENTER  &lt 3 BACKSPACE
             >;
 
             trackball-bindings = <&tmv_coarse>;
@@ -100,10 +100,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans            &trans        &trans        &trans          &trans    &out OUT_USB  &bt BT_CLR    &trans        &trans           &trans
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &trans    &trans        &kp C_PREV    &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_NEXT
-&trans            &trans        &trans        &trans          &trans    &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3
-                                &trans        &trans          &trans    &kp C_STOP    &kp C_PAUSE
+&kp F1  &kp F2   &kp F3     &kp F4   &kp LEFT_BRACKET     &out OUT_USB  &bt BT_CLR    &trans        &trans           &trans
+&kp F5  &kp F6   &kp F7     &kp F8   &kp RIGHT_BRACKET    &trans        &kp C_PREV    &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_NEXT
+&kp F9  &kp F10  &kp F11    &kp F12  &kp SQT              &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3
+                 &kp LSHFT  &trans   &trans               &kp C_STOP    &kp C_PAUSE
             >;
         };
 
@@ -115,10 +115,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp AT_SIGN    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE           &trans              &trans              &trans               &trans  &trans
-&kp HASH   &kp QUESTION   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPERSAND      &trans              &kp LC(UP_ARROW)    &trans               &trans  &trans
-&kp SLASH  &kp BACKSLASH  &kp LESS_THAN         &kp GREATER_THAN       &kp EXCLAMATION    &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans  &trans
-                          &kp LS(P)             &kp DOLLAR             &kp P              &trans              &trans
+&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)   &kp LS(N5)         &kp LS(NUMBER_6)    &kp LS(NUMBER_7)    &kp LS(NUMBER_8)     &kp LS(NUMBER_9)  &kp LS(NUMBER_0)
+&kp HASH          &kp QUESTION      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AMPERSAND      &trans              &kp LC(UP_ARROW)    &trans               &kp LS(MINUS)     &kp LS(EQUAL)
+&kp SLASH         &kp BACKSLASH     &kp LESS_THAN     &kp GREATER_THAN   &kp EXCLAMATION    &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans            &trans
+                                    &kp LS(P)         &kp DOLLAR         &kp P              &trans              &trans
             >;
         };
 
@@ -133,19 +133,10 @@
 
         Nav {
             bindings = <
-&trans     &trans        &trans        &trans          &trans    &kp PAGE_UP    &kp HOME       &kp UP     &kp END    &kp RG(RS(Z))
-&kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &trans    &kp PAGE_DOWN  &kp LEFT       &kp DOWN   &kp RIGHT  &kp RG(Z)
-&trans     &trans        &trans        &trans          &trans    &trans         &kp RG(B)      &kp RG(C)  &kp LG(X)  &kp CAPS
-                         &trans        &trans          &trans    &kp ENTER      &kp BACKSPACE
-            >;
-        };
-
-        Fun {
-            bindings = <
-&kp F12  &kp F7  &kp F8      &kp F9     &trans                  &trans  &trans           &trans         &trans         &trans
-&kp F11  &kp F4  &kp F5      &kp F6     &trans                  &trans  &kp RIGHT_SHIFT  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL
-&kp F10  &kp F1  &kp F2      &kp F3     &kp LS(LG(NUMBER_4))    &trans  &trans           &trans         &trans         &trans
-                 &kp ESCAPE  &kp SPACE  &kp TAB                 &trans  &trans
+&kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&kp CAPSLOCK    &trans        &trans        &trans        &trans          &trans        &trans         &trans        &kp MINUS     &kp EQUAL
+&kp LEFT_SHIFT  &trans        &trans        &trans        &trans          &trans        &trans         &trans        &trans        &trans
+                              &trans        &trans        &trans          &kp ENTER     &kp BACKSPACE
             >;
         };
 
@@ -153,7 +144,7 @@
             bindings = <
 &trans  &trans  &trans     &trans  &trans       &trans  &trans     &trans     &trans     &trans
 &trans  &trans  &trans     &trans  &trans       &trans  &trans     &mkp MCLK  &trans     &trans
-&trans  &trans  &trans     &trans  &trans       &trans  &mkp LCLK  &mo 7      &mkp RCLK  &trans
+&trans  &trans  &trans     &trans  &trans       &trans  &mkp LCLK  &mo 6      &mkp RCLK  &trans
                 &mkp LCLK  &trans  &mkp RCLK    &trans  &trans
             >;
         };
