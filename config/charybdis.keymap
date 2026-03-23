@@ -6,8 +6,9 @@
 
 &lt {
     tapping-term-ms = <200>;
-    flavor = "balanced";
-    quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <125>;
+            global-quick-tap;
 };
 
 / {
